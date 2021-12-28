@@ -1,8 +1,8 @@
 package object_model
 
 import (
-	"core_foundation/core_object_model"
-	"database_manager/utils"
+	"github.com/OntoLedgy/core_ontology/core_object_model"
+	"github.com/OntoLedgy/storage_interop_services/databases/utils"
 )
 
 //#TODO remove Characters from CurrentString (just links)
