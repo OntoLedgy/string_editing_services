@@ -1,8 +1,8 @@
 package object_model
 
 import (
-	"core_foundation/core_object_model"
 	"fmt"
+	"github.com/OntoLedgy/core_ontology/core_object_model"
 )
 
 type StringEditors struct {
