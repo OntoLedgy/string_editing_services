@@ -1,8 +1,8 @@
 package interfaces
 
 import (
-	core_object_model_interfaces "core_foundation/interfaces"
-	"string_editing_services/object_model"
+	core_object_model_interfaces "github.com/OntoLedgy/core_ontology/interfaces"
+	"github.com/OntoLedgy/string_editing_services/object_model"
 )
 
 type IStringEditors interface {

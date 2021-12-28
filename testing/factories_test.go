@@ -2,7 +2,8 @@ package testing
 
 import (
 	"fmt"
-	"string_editing_services/factories"
+
+	"github.com/OntoLedgy/string_editing_services/factories"
 	"testing"
 )
 

@@ -2,7 +2,7 @@ package testing
 
 import (
 	"fmt"
-	"string_editing_services/object_model"
+	"github.com/OntoLedgy/string_editing_services/object_model"
 	"testing"
 )
 
