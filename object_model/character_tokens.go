@@ -2,7 +2,7 @@ package object_model
 
 import (
 	"github.com/OntoLedgy/core_ontology/core_object_model"
-	"github.com/OntoLedgy/storage_interop_services/databases/utils"
+	"github.com/OntoLedgy/storage_interop_services/code/services/databases/utils"
 )
 
 type CharacterTokens struct {
