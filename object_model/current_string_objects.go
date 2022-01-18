@@ -1,7 +1,7 @@
 package object_model
 
 import (
-	"github.com/OntoLedgy/core_ontology/core_object_model"
+	"github.com/OntoLedgy/core_ontology/code/core/object_model/objects"
 	"github.com/OntoLedgy/storage_interop_services/code/services/databases/utils"
 )
 
@@ -10,7 +10,7 @@ import (
 //#TODO go for a pointer approach
 
 type CurrentStrings struct {
-	core_object_model.Objects
+	objects.BnogObjects
 	Characters                []CharacterTokens
 	Current_string_links_list []CurrentStringLinks
 }

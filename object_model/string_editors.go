@@ -2,11 +2,11 @@ package object_model
 
 import (
 	"fmt"
-	"github.com/OntoLedgy/core_ontology/core_object_model"
+	"github.com/OntoLedgy/core_ontology/code/core/object_model/objects"
 )
 
 type StringEditors struct {
-	core_object_model.Objects
+	objects.BnogObjects
 	CurrentString       string
 	String_to_edit      string
 	String_edit_history *StringEditHistories

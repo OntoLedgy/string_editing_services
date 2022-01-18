@@ -3,8 +3,8 @@ module github.com/OntoLedgy/string_editing_services
 go 1.18
 
 require (
-	github.com/OntoLedgy/core_ontology v0.0.8
-	github.com/OntoLedgy/storage_interop_services v0.0.10
+	github.com/OntoLedgy/core_ontology v0.0.10
+	github.com/OntoLedgy/storage_interop_services v0.0.14
 )
 
 require (
