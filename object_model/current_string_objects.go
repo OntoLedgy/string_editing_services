@@ -49,7 +49,7 @@ func appendCharactersAndLinks(
 			characterPosition,
 			character)
 
-		append_link(
+		appendLink(
 			currentStrings,
 			characterPosition)
 	}
@@ -60,53 +60,53 @@ func appendCharacter(
 	characterPosition int,
 	character int32) {
 
-	currentString.Characters[characterPosition].character_uuid, _ =
+	currentString.Characters[characterPosition].characterUuid, _ =
 		uuid_service.GetUUID(
 			1,
 			"")
 
 	currentString.
 		Characters[characterPosition].
-		Code_point =
+		CodePoint =
 		character
 }
 
-func append_link(
-	current_string *CurrentStrings,
-	character_position int) {
+func appendLink(
+	currentString *CurrentStrings,
+	characterPosition int) {
 
-	if character_position == 0 {
+	if characterPosition == 0 {
 		return
 	}
 
-	current_string_link :=
-		&current_string.
-			CurrentStringLinksList[character_position-1]
+	currentStringLink :=
+		&currentString.
+			CurrentStringLinksList[characterPosition-1]
 
-	current_string_link.
-		Previous_character_token =
-		current_string.
-			Characters[character_position-1]
+	currentStringLink.
+		PreviousCharacterToken =
+		currentString.
+			Characters[characterPosition-1]
 
-	current_string_link.
-		Next_character_token =
-		current_string.
-			Characters[character_position]
+	currentStringLink.
+		NextCharacterToken =
+		currentString.
+			Characters[characterPosition]
 
 }
 
 func (currentString *CurrentStrings) GetCurrentStringArray() []rune {
 
-	current_string_length := len(currentString.Characters)
+	currentStringLength := len(currentString.Characters)
 
-	current_string_array := make(
+	currentStringArray := make(
 		[]rune,
-		current_string_length)
+		currentStringLength)
 
 	for index, character := range currentString.Characters {
-		current_string_array[index] = character.Code_point
+		currentStringArray[index] = character.CodePoint
 	}
 
-	return current_string_array
+	return currentStringArray
 
 }

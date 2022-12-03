@@ -6,7 +6,7 @@ import (
 )
 
 type CharacterTokens struct {
-	object         *objects.BnogObjects
-	character_uuid *uuid_service.UUIDs
-	Code_point     rune
+	object        *objects.BnogObjects
+	characterUuid *uuid_service.UUIDs
+	CodePoint     rune
 }
