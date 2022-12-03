@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/OntoLedgy/core_ontology v0.0.10
+	github.com/OntoLedgy/ol_common_services v0.0.15
 	github.com/OntoLedgy/storage_interop_services v0.0.14
 )
 
