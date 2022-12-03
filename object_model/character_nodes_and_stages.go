@@ -1,7 +1,7 @@
 package object_model
 
 type CharacterNodesAndStages struct {
-	represented_character_token *CharacterTokens
+	representedCharacterToken *CharacterTokens
 }
 
 type CharacterNodes struct {
