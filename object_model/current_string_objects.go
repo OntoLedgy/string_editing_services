@@ -2,7 +2,7 @@ package object_model
 
 import (
 	"github.com/OntoLedgy/core_ontology/code/core/object_model/objects"
-	"github.com/OntoLedgy/storage_interop_services/code/services/databases/utils"
+	"github.com/OntoLedgy/ol_common_services/code/services/identification_services/uuid_service"
 )
 
 //#TODO remove Characters from CurrentString (just links)
@@ -11,62 +11,62 @@ import (
 
 type CurrentStrings struct {
 	objects.BnogObjects
-	Characters                []CharacterTokens
-	Current_string_links_list []CurrentStringLinks
+	Characters             []CharacterTokens
+	CurrentStringLinksList []CurrentStringLinks
 }
 
-func (current_string *CurrentStrings) Initialise(
-	string_to_be_created string) {
+func (currentString *CurrentStrings) Initialise(
+	stringToBeCreated string) {
 
-	string_length :=
+	stringLength :=
 		len(
-			string_to_be_created)
+			stringToBeCreated)
 
-	current_string.Characters =
+	currentString.Characters =
 		make(
 			[]CharacterTokens,
-			string_length)
+			stringLength)
 
-	current_string.Current_string_links_list =
+	currentString.CurrentStringLinksList =
 		make(
 			[]CurrentStringLinks,
-			string_length-1)
+			stringLength-1)
 
-	append_characters_and_links(
-		string_to_be_created,
-		current_string)
+	appendCharactersAndLinks(
+		stringToBeCreated,
+		currentString)
 
 }
 
-func append_characters_and_links(
-	string_to_be_created string,
-	current_string *CurrentStrings) {
+func appendCharactersAndLinks(
+	stringToBeCreated string,
+	currentStrings *CurrentStrings) {
 
-	for character_position, character := range string_to_be_created {
+	for characterPosition, character := range stringToBeCreated {
 
-		append_character(
-			current_string,
-			character_position,
+		appendCharacter(
+			currentStrings,
+			characterPosition,
 			character)
 
 		append_link(
-			current_string,
-			character_position)
+			currentStrings,
+			characterPosition)
 	}
 }
 
-func append_character(
-	current_string *CurrentStrings,
-	character_position int,
+func appendCharacter(
+	currentString *CurrentStrings,
+	characterPosition int,
 	character int32) {
 
-	current_string.Characters[character_position].character_uuid, _ =
-		utils.GetUUID(
+	currentString.Characters[characterPosition].character_uuid, _ =
+		uuid_service.GetUUID(
 			1,
 			"")
 
-	current_string.
-		Characters[character_position].
+	currentString.
+		Characters[characterPosition].
 		Code_point =
 		character
 }
@@ -81,7 +81,7 @@ func append_link(
 
 	current_string_link :=
 		&current_string.
-			Current_string_links_list[character_position-1]
+			CurrentStringLinksList[character_position-1]
 
 	current_string_link.
 		Previous_character_token =
@@ -95,15 +95,15 @@ func append_link(
 
 }
 
-func (current_string *CurrentStrings) GetCurrentStringArray() []rune {
+func (currentString *CurrentStrings) GetCurrentStringArray() []rune {
 
-	current_string_length := len(current_string.Characters)
+	current_string_length := len(currentString.Characters)
 
 	current_string_array := make(
 		[]rune,
 		current_string_length)
 
-	for index, character := range current_string.Characters {
+	for index, character := range currentString.Characters {
 		current_string_array[index] = character.Code_point
 	}
 

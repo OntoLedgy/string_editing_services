@@ -15,6 +15,6 @@ func TestCurrentString(t *testing.T) {
 	fmt.Printf(
 		"%v\n%v\n",
 		current_string.GetCurrentStringArray(),
-		current_string.Current_string_links_list)
+		current_string.CurrentStringLinksList)
 
 }
