@@ -10,14 +10,14 @@ type CharacterNodes struct {
 
 type CharacterStages struct {
 	*CharacterNodesAndStages
-	parent_stage *CharacterNodesAndStages
+	parentStage *CharacterNodesAndStages
 }
 
 type CharacterBoundaries struct{}
 
 type FourDStringLinks struct {
-	Previous_character_node CharacterTokens
-	Next_character_node     CharacterTokens
+	PreviousCharacterNode CharacterTokens
+	NextCharacterNode     CharacterTokens
 }
 
 type BeforeAfterLinks struct{}
