@@ -1,27 +1,27 @@
 package interfaces
 
 import (
-	core_object_model_interfaces "github.com/OntoLedgy/core_ontology/code/interfaces"
+	coreObjectModelInterfaces "github.com/OntoLedgy/core_ontology/code/interfaces"
 	"github.com/OntoLedgy/string_editing_services/object_model"
 )
 
 type IStringEditors interface {
-	core_object_model_interfaces.IObjects
+	coreObjectModelInterfaces.IObjects
 
 	Terminate() *object_model.StringEditHistories
 
 	Insert(
-		edit_range object_model.StringEditRanges,
-		string_to_insert string)
+		editRange object_model.StringEditRanges,
+		stringToInsert string)
 
 	Delete(
-		edit_range object_model.StringEditRanges)
+		editRanges object_model.StringEditRanges)
 
 	Substitute(
-		edit_range object_model.StringEditRanges,
-		string_to_substitute string)
+		editRange object_model.StringEditRanges,
+		stringToSubstitute string)
 
 	GetCurrentString() object_model.CurrentStrings
 
-	Get_string_edit_history() *object_model.StringEditHistories
+	GetStringEditHistory() *object_model.StringEditHistories
 }

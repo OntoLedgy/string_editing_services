@@ -13,7 +13,7 @@ func TestFactories(t *testing.T) {
 	stringEditor := stringEditorFactory.CreateStringEditor(
 		"test1")
 
-	edit_range := factories.CreateStringEditRange(1, 2)
+	editRange := factories.CreateStringEditRange(1, 2)
 
-	fmt.Printf("%v\n%v\n", stringEditor, edit_range)
+	fmt.Printf("%v\n%v\n", stringEditor, editRange)
 }

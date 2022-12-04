@@ -8,13 +8,13 @@ import (
 
 func TestCurrentString(t *testing.T) {
 
-	var current_string object_model.CurrentStrings
+	var currentString object_model.CurrentStrings
 
-	current_string.Initialise("test")
+	currentString.Initialise("test")
 
 	fmt.Printf(
 		"%v\n%v\n",
-		current_string.GetCurrentStringArray(),
-		current_string.CurrentStringLinksList)
+		currentString.GetCurrentStringArray(),
+		currentString.CurrentStringLinksList)
 
 }

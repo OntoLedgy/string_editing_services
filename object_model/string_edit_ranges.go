@@ -1,22 +1,24 @@
 package object_model
 
 type StringEditRanges struct {
-	Start_position int
-	Range_length   int
+	StartPosition int
+	RangeLength   int
 }
 
-func (string_edit_range *StringEditRanges) Get_start_position() int {
+func (stringEditRange *StringEditRanges) GetStartPosition() int {
 
 	return 0
 }
 
-func (string_edit_range *StringEditRanges) Get_end_position() int {
+func (stringEditRange *StringEditRanges) GetEndPosition() int {
 
 	return 0
 }
 
-func (string_edit_range *StringEditRanges) Constructor(start_position, range_length int) {
+func (stringEditRange *StringEditRanges) Constructor(
+	startPosition,
+	rangeLength int) {
 
-	string_edit_range.Start_position = start_position
-	string_edit_range.Range_length = range_length
+	stringEditRange.StartPosition = startPosition
+	stringEditRange.RangeLength = rangeLength
 }

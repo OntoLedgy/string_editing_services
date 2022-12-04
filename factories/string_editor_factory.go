@@ -7,14 +7,15 @@ import (
 
 type StringEditorFactory struct{}
 
-func (factory *StringEditorFactory) CreateStringEditor(string_to_edit string) interfaces.IStringEditors {
+func (factory *StringEditorFactory) CreateStringEditor(
+	stringToEdit string) interfaces.IStringEditors {
 
-	string_editor := new(
+	stringEditor := new(
 		object_model.StringEditors)
 
-	string_editor.
+	stringEditor.
 		Constructor(
-			string_to_edit)
+			stringToEdit)
 
-	return string_editor
+	return stringEditor
 }

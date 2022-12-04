@@ -7,67 +7,69 @@ import (
 
 type StringEditors struct {
 	objects.BnogObjects
-	CurrentString       string
-	String_to_edit      string
-	String_edit_history *StringEditHistories
+	CurrentString     string
+	StringToEdit      string
+	StringEditHistory *StringEditHistories
 }
 
-func (string_editor *StringEditors) Constructor(string_to_edit string) {
+func (stringEditor *StringEditors) Constructor(stringToEdit string) {
 
 	//#TODO this should not need to be assigned explicitly, should just be a setter.
-	string_editor.Object_uuid = string_editor.Set_object_uuid()
+	stringEditor.Object_uuid = stringEditor.Set_object_uuid()
 
-	string_editor.String_to_edit =
-		string_to_edit
+	stringEditor.StringToEdit =
+		stringToEdit
 
-	string_editor.CurrentString =
-		string_to_edit
+	stringEditor.CurrentString =
+		stringToEdit
 
-	string_editor.
-		String_edit_history =
+	stringEditor.
+		StringEditHistory =
 		new(StringEditHistories)
 
-	string_editor.String_edit_history.
-		Create(string_to_edit)
+	stringEditor.StringEditHistory.
+		Create(stringToEdit)
 }
 
 func (
-	string_editor *StringEditors) Terminate() *StringEditHistories {
+	stringEditor *StringEditors) Terminate() *StringEditHistories {
 
-	return string_editor.String_edit_history
+	return stringEditor.StringEditHistory
 
 }
 
 func (
-	string_editor *StringEditors) Insert(
-	edit_range StringEditRanges,
-	string_to_insert string) {
+	stringEditor *StringEditors) Insert(
+	editRange StringEditRanges,
+	stringToInsert string) {
+
 	fmt.Print("inserting\n")
-}
-
-func (
-	string_editor *StringEditors) Delete(
-	edit_range StringEditRanges) {
 
 }
 
 func (
-	string_editor *StringEditors) Substitute(
-	edit_range StringEditRanges,
-	string_to_substitute string) {
+	stringEditor *StringEditors) Delete(
+	editRange StringEditRanges) {
 
 }
 
 func (
-	string_editor *StringEditors) GetCurrentString() CurrentStrings {
+	stringEditor *StringEditors) Substitute(
+	editRange StringEditRanges,
+	stringToSubstitute string) {
 
-	var current_string CurrentStrings
-
-	return current_string
 }
 
 func (
-	string_editor *StringEditors) Get_string_edit_history() *StringEditHistories {
+	stringEditor *StringEditors) GetCurrentString() CurrentStrings {
 
-	return string_editor.String_edit_history
+	var currentString CurrentStrings
+
+	return currentString
+}
+
+func (
+	stringEditor *StringEditors) GetStringEditHistory() *StringEditHistories {
+
+	return stringEditor.StringEditHistory
 }

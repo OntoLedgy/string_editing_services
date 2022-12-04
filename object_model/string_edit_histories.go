@@ -1,87 +1,87 @@
 package object_model
 
 type StringEditHistories struct {
-	Four_d_string_links   *[]FourDStringLinks
-	string_history        []string
-	string_marked_history []string
-	original_string       string
-	current_string        string
-	modified_string       string
-	marked_string         string
+	FourDimensionalStringLinks *[]FourDStringLinks
+	stringHistory              []string
+	stringMarkedHistory        []string
+	originalString             string
+	currentString              string
+	modifiedString             string
+	markedString               string
 }
 
-func (string_edit_history *StringEditHistories) Create(initial_string string) {
+func (stringEditHistory *StringEditHistories) Create(initialString string) {
 
-	string_edit_history.
-		original_string = initial_string
+	stringEditHistory.
+		originalString = initialString
 
-	string_edit_history.
-		current_string = initial_string
-
-}
-
-func (string_edit_history *StringEditHistories) Terminate() {
+	stringEditHistory.
+		currentString = initialString
 
 }
 
-func (string_edit_history *StringEditHistories) GetEditTransactions() []int {
-	var edit_transactions []int
+func (stringEditHistory *StringEditHistories) Terminate() {
 
-	return edit_transactions
 }
 
-func (string_edit_history *StringEditHistories) GetString(transaction_id int) string {
+func (stringEditHistory *StringEditHistories) GetEditTransactions() []int {
+	var editTransactions []int
 
-	if transaction_id == 0 {
-		return string_edit_history.original_string
+	return editTransactions
+}
+
+func (stringEditHistory *StringEditHistories) GetString(transactionId int) string {
+
+	if transactionId == 0 {
+		return stringEditHistory.originalString
 	}
 
 	return ""
 }
 
-func (string_edit_history *StringEditHistories) GetCurrentString() string {
+func (stringEditHistory *StringEditHistories) GetCurrentString() string {
 
-	return string_edit_history.current_string
+	return stringEditHistory.currentString
 
 }
 
-func (string_edit_history *StringEditHistories) SetCurrentString(string_to_set string) {
+func (stringEditHistory *StringEditHistories) SetCurrentString(stringToSet string) {
 
-	string_edit_history.string_history =
+	stringEditHistory.stringHistory =
 		append(
-			string_edit_history.string_history,
-			string_edit_history.current_string)
+			stringEditHistory.stringHistory,
+			stringEditHistory.currentString)
 
-	string_edit_history.current_string = string_to_set
+	stringEditHistory.currentString = stringToSet
 }
 
-func (string_edit_history *StringEditHistories) GetStringEditHistory() []string {
+func (stringEditHistory *StringEditHistories) GetStringEditHistory() []string {
 
-	return string_edit_history.string_history
+	return stringEditHistory.stringHistory
 }
 
-func (string_edit_history *StringEditHistories) GetEditChanges(transaction_id int) string {
+func (stringEditHistory *StringEditHistories) GetEditChanges(transactionId int) string {
 
-	var marked_string string
+	var markedString string
 
-	return marked_string
+	return markedString
 }
 
-func (string_edit_history *StringEditHistories) Get_modified_string() string {
+func (stringEditHistory *StringEditHistories) GetModifiedString() string {
 
-	return string_edit_history.modified_string
+	return stringEditHistory.modifiedString
 }
 
-func (string_edit_history *StringEditHistories) Get_marked_string() string {
+func (stringEditHistory *StringEditHistories) GetMarkedString() string {
 
-	return string_edit_history.marked_string
+	return stringEditHistory.markedString
 }
 
 //TODO - Temporary solution for setting history
-func (string_edit_history *StringEditHistories) Set_string_changes(modified_string, marked_string string) {
+func (stringEditHistory *StringEditHistories) SetStringChanges(modifiedString, markedString string) {
 
-	string_edit_history.modified_string = modified_string
-	string_edit_history.marked_string = marked_string
-	string_edit_history.string_marked_history = append(string_edit_history.string_marked_history, marked_string)
+	stringEditHistory.modifiedString = modifiedString
+	stringEditHistory.markedString = markedString
+	stringEditHistory.stringMarkedHistory = append(stringEditHistory.stringMarkedHistory, markedString)
 
 }
