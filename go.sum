@@ -1,9 +1,9 @@
-github.com/OntoLedgy/core_ontology v0.0.10 h1:PDWWYwF885KHFG4bGX60iffoPEH6AjqRs0TrCl9mWRc=
-github.com/OntoLedgy/core_ontology v0.0.10/go.mod h1:3uR3pdbiFodec/1MLv8lGQcQuVHVH0alidgcCoKGDvU=
+github.com/OntoLedgy/core_ontology v0.0.13 h1:nZ1NbXkFBTzNYfvWsa6gBPamBDk7vThP9doooGY+bHQ=
+github.com/OntoLedgy/core_ontology v0.0.13/go.mod h1:LZXw5NXmqUG1kAoTffBuemLZ01WilFFleRPOx7ysLaM=
 github.com/OntoLedgy/ol_common_services v0.0.15 h1:gJNtIHTOvOk4UXTzeDVk345tA6B0Me2aShzoH6jdD7g=
 github.com/OntoLedgy/ol_common_services v0.0.15/go.mod h1:suLx/aA1MNDuMr8gW12/mOBSck9rG7Y8FWbIUEyl66M=
-github.com/OntoLedgy/storage_interop_services v0.0.14 h1:oDyAbSrSaSWKxpfOcHc3rYNMuFGQdlX7t86Bh2kVpq8=
-github.com/OntoLedgy/storage_interop_services v0.0.14/go.mod h1:MPWmQj8537jwM6T9JdYPLG5TZ/dWmjkglciyjqetgZw=
+github.com/OntoLedgy/storage_interop_services v0.0.17 h1:eOpqYZP7vTALzWmGzsnVErAE6WmDcXGaMI22WzC+5Sw=
+github.com/OntoLedgy/storage_interop_services v0.0.17/go.mod h1:MPWmQj8537jwM6T9JdYPLG5TZ/dWmjkglciyjqetgZw=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pretty v0.3.0 h1:WgNl7dwNpEZ6jJ9k1snq4pZsg7DOEN8hP9Xw0Tsjwk0=

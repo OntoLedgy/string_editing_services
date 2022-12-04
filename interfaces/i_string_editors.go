@@ -1,7 +1,7 @@
 package interfaces
 
 import (
-	coreObjectModelInterfaces "github.com/OntoLedgy/core_ontology/code/interfaces"
+	coreObjectModelInterfaces "github.com/OntoLedgy/core_ontology/code/core/contracts"
 	"github.com/OntoLedgy/string_editing_services/object_model"
 )
 

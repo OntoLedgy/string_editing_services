@@ -15,7 +15,7 @@ type StringEditors struct {
 func (stringEditor *StringEditors) Constructor(stringToEdit string) {
 
 	//#TODO this should not need to be assigned explicitly, should just be a setter.
-	stringEditor.Object_uuid = stringEditor.Set_object_uuid()
+	stringEditor.ObjectUuid = stringEditor.SetObjectUuid()
 
 	stringEditor.StringToEdit =
 		stringToEdit
